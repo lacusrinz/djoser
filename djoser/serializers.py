@@ -21,7 +21,7 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = tuple(User.REQUIRED_FIELDS) + (
-            User.USERNAME_FIELD,
+            User.USERNAME_FIELD, 'id'
         )
         read_only_fields = (
             User.USERNAME_FIELD,
