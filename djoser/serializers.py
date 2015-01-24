@@ -52,7 +52,7 @@ class UserRegistrationWithAuthTokenSerializer(UserRegistrationSerializer):
     class Meta(UserRegistrationSerializer.Meta):
         model = User
         fields = UserRegistrationSerializer.Meta.fields + (
-            'auth_token',
+            'auth_token', 'id',
         )
 
     def get_user_auth_token(self, _):
